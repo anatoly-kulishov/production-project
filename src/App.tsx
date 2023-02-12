@@ -1,12 +1,29 @@
-import {Counter} from "./components/Counter";
+import React, {FC, Suspense} from "react";
+import {Link, Route, Routes} from "react-router-dom";
 
-import "./index.scss";
+import {AboutPageLazy, MainPageLazy} from "./pages";
+import {useTheme} from "./hooks";
 
-export const App = () => {
+import "./styles/index.scss";
+
+export const App: FC = () => {
+    const {theme, toggleTheme} = useTheme();
+
     return (
-        <div className="app">
-            <div>App</div>
-            <Counter/>
+        <div className={`app ${theme}`}>
+            <button onClick={toggleTheme}>
+                Toggle
+            </button>
+            {' '}
+            <Link to="/">Main</Link>
+            {' '}
+            <Link to="/about">About</Link>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Routes>
+                    <Route path="/about" element={<AboutPageLazy/>}/>
+                    <Route path="/" element={<MainPageLazy/>}/>
+                </Routes>
+            </Suspense>
         </div>
     )
 }
