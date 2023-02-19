@@ -1,7 +1,6 @@
 import {useState} from "react";
 
-import {DEFAULT_THEME, THEME} from "./Theme.constants";
-import {LOCAL_STORAGE_THEME_KEY} from "./Theme.context";
+import {DEFAULT_THEME, LOCAL_STORAGE_THEME_KEY, THEME} from "./Theme.constants";
 import {IUseThemeResult} from "./Theme.declarations";
 
 export const useTheme = (): IUseThemeResult => {
@@ -9,7 +8,7 @@ export const useTheme = (): IUseThemeResult => {
 
     const toggleTheme = () => {
         const newTheme = theme == THEME.DARK ? THEME.LIGHT : THEME.DARK;
-        
+
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
         setTheme(newTheme);
     }

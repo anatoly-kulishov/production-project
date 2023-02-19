@@ -1,9 +1,10 @@
 import React, {FC, Suspense} from "react";
 import {Link, Route, Routes} from "react-router-dom";
 
-import {AboutPageLazy, MainPageLazy} from "./pages";
-import {classNames} from "./utils";
-import {useTheme} from "./hooks";
+import {AboutPageLazy, MainPageLazy} from "pages";
+import {classNames} from "shared";
+
+import {useTheme} from "./providers";
 
 import "./styles/index.scss";
 

@@ -1,2 +1,1 @@
-export * from './AboutPage';
-export * from './AboutPage.lazy';
+export * from './ui';

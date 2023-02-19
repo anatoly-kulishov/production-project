@@ -6,11 +6,22 @@
   "scripts": {
     "start": "npx webpack serve --env port=3000",
     "build:prod": "npx webpack --env mode=production",
-    "build:dev": "npx webpack --env mode=development"
+    "build:dev": "npx webpack --env mode=development",
+    "circular-deps-check": "npx madge --circular src --extensions ts,tsx --ts-config ./tsconfig.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/anatoly-kulishov/production-project.git"
+  },
+  "madge": {
+    "detectiveOptions": {
+      "tsx": {
+        "skipTypeImports": true
+      },
+      "ts": {
+        "skipTypeImports": true
+      }
+    }
   },
   "keywords": [],
   "author": "",
@@ -76,7 +87,8 @@
     "webpack": "^5.69.1",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "webpack-dev-server": "^4.7.4",
+    "madge": "^5.0.1"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",
