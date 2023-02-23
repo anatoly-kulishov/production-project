@@ -1,10 +1,10 @@
-import React, {FC, Suspense} from "react";
-import {Link, Route, Routes} from "react-router-dom";
+import React, {FC} from "react";
 
-import {AboutPageLazy, MainPageLazy} from "pages";
-import {classNames} from "shared";
+import { classNames } from "shared/lib";
+import {Navbar} from "widgets";
 
 import {useTheme} from "./providers";
+import { AppRouter } from "./providers/router";
 
 import "./styles/index.scss";
 
@@ -13,19 +13,11 @@ export const App: FC = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
+            <Navbar/>
+            <AppRouter/>
             <button onClick={toggleTheme}>
                 Toggle
             </button>
-            {' '}
-            <Link to="/">Main</Link>
-            {' '}
-            <Link to="/about">About</Link>
-            <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                    <Route path="/about" element={<AboutPageLazy/>}/>
-                    <Route path="/" element={<MainPageLazy/>}/>
-                </Routes>
-            </Suspense>
         </div>
     )
-}
+} 

@@ -2,8 +2,9 @@ import React from "react";
 import {render} from "react-dom";
 import {BrowserRouter} from "react-router-dom";
 
-import {App, ThemeProvider} from "app";
- 
+import { ThemeProvider } from "app/providers";
+import {App} from "app";
+
 const app = (
     <BrowserRouter>
         <ThemeProvider>
