@@ -1,6 +1,6 @@
 import {createContext} from "react";
 
-import {IThemeContext} from "./Theme.declarations";
+import { IThemeContextProps} from "./Theme.declarations";
 
-export const ThemeContext = createContext<IThemeContext>({});
+export const ThemeContext = createContext<IThemeContextProps>({});
 

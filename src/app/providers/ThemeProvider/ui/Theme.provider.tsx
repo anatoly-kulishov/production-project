@@ -1,13 +1,13 @@
 import {FC, useMemo, useState} from "react";
 
-import {DEFAULT_THEME, THEME, ThemeContext} from "../lib";
+import {DEFAULT_THEME, Theme, ThemeContext} from "../lib";
 
 export const ThemeProvider: FC = ({children}) => {
-    const [theme, setTheme] = useState<THEME>(DEFAULT_THEME);
+    const [theme, setTheme] = useState<Theme>(DEFAULT_THEME);
 
     const defaultProps = useMemo(() => ({
-        theme,
-        setTheme,
+        theme: theme,
+        setTheme: setTheme,
     }), [theme])
 
     return (

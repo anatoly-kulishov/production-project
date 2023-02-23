@@ -1,16 +1,16 @@
-import {useState} from "react";
+import {useContext} from "react";
 
-import {DEFAULT_THEME, LOCAL_STORAGE_THEME_KEY, THEME} from "./Theme.constants";
+import {LOCAL_STORAGE_THEME_KEY, Theme} from "./Theme.constants";
+import {ThemeContext} from "./Theme.context";
 import {IUseThemeResult} from "./Theme.declarations";
 
-export const useTheme = (): IUseThemeResult => {
-    const [theme, setTheme] = useState<THEME>(DEFAULT_THEME);
+export function useTheme(): IUseThemeResult {
+    const {theme, setTheme} = useContext(ThemeContext);
 
     const toggleTheme = () => {
-        const newTheme = theme == THEME.DARK ? THEME.LIGHT : THEME.DARK;
-
-        localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
+        const newTheme = theme === Theme.DARK ? Theme.LIGHT : Theme.DARK
         setTheme(newTheme);
+        localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme)
     }
 
     return {theme, toggleTheme}

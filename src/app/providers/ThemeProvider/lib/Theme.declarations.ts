@@ -1,11 +1,11 @@
-import {THEME} from "./Theme.constants";
+import {Theme} from "./Theme.constants";
 
-export interface IThemeContext {
-    theme?: THEME;
-    setTheme?: (theme: THEME) => void;
+export interface IThemeContextProps {
+    theme?: Theme;
+    setTheme?: (theme: Theme) => void;
 }
 
 export interface IUseThemeResult {
     toggleTheme: () => void;
-    theme: THEME;
+    theme: Theme;
 }
