@@ -1,9 +1,9 @@
-import React, {FC} from "react";
+import React, {FC, Suspense} from "react";
 
-import {classNames} from "shared/lib";
-import {Navbar} from "widgets";
+import { classNames } from "shared/lib";
+import {Navbar, Sidebar} from "widgets";
 
-import {AppRouter, useTheme} from "app/providers";
+import {AppRouter, useTheme} from "./providers";
 
 import "./styles/index.scss";
 
@@ -12,8 +12,13 @@ const App: FC = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Navbar/>
-            <AppRouter/>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Navbar/>
+                <div className="content-page">
+                    <Sidebar/>
+                    <AppRouter/>
+                </div>
+            </Suspense>
         </div>
     )
 }
