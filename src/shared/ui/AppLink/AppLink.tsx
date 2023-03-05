@@ -1,14 +1,16 @@
-import {FC} from 'react';
-import {Link} from 'react-router-dom';
+import { FC } from 'react';
+import { Link } from 'react-router-dom';
 
-import {classNames} from "shared/lib";
+import { classNames } from 'shared/lib';
 
-import {AppLinkTheme, IAppLinkProps} from "./AppLink.declarations";
+import { AppLinkTheme, IAppLinkProps } from './AppLink.declarations';
 
-import cls from "./AppLink.module.scss"
+import cls from './AppLink.module.scss';
 
 export const AppLink: FC<IAppLinkProps> = (props) => {
-    const {children, className, to, theme = AppLinkTheme.PRIMARY, ...otherProps} = props;
+    const {
+        children, className, to, theme = AppLinkTheme.PRIMARY, ...otherProps
+    } = props;
 
     return (
         <Link
@@ -20,4 +22,3 @@ export const AppLink: FC<IAppLinkProps> = (props) => {
         </Link>
     );
 };
-

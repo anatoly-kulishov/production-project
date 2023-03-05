@@ -1,2 +1,2 @@
-export * from "./AppLink"
-export * from "./AppLink.declarations"
+export * from './AppLink';
+export * from './AppLink.declarations';

@@ -1,1 +1,1 @@
-export * from "./routeConfig";
+export * from './routeConfig';

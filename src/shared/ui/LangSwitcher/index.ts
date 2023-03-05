@@ -1,2 +1,2 @@
-export * from "./LangSwitcher";
-export * from "./LangSwitcher.declarations";
+export * from './LangSwitcher';
+export * from './LangSwitcher.declarations';
