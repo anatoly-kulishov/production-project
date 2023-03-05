@@ -1,5 +1,6 @@
 import { classNames } from 'shared/lib';
-import { Loader } from 'shared/ui';
+
+import { Loader } from '../Loader';
 
 import { IPageLoaderProps } from './PageLoader.declarations';
 
