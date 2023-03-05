@@ -1,5 +1,9 @@
 {
   "toggle": "Переключатель",
   "translate": "Перевод",
-  "language": "Русский"
+  "language": "Русский",
+  "pageNotFound": "Страница не найдена",
+  "unexpectedError": "Произошла непредвиденная ошибка",
+  "refreshThePage": "Обновить страницу",
+  "throwError": "throw error"
 }

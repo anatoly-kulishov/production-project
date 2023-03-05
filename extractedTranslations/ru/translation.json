@@ -7,5 +7,11 @@
     }
   },
   "language": "language",
-  "toggle": "toggle"
+  "pageNotFound": "pageNotFound",
+  "refreshThePage": "refreshThePage",
+  "toggle": "toggle",
+  "unexpectedError": "unexpectedError",
+  "ОrefreshThePage": "ОrefreshThePage",
+  "Обновить страницу": "Обновить страницу",
+  "Произошла непредвиденная ошибка": "Произошла непредвиденная ошибка"
 }

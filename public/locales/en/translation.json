@@ -1,5 +1,9 @@
 {
   "toggle": "Toggle",
   "translate": "Translate",
-  "language": "English"
+  "language": "English",
+  "pageNotFound": "Page not found",
+  "unexpectedError": "An unexpected error has occurred",
+  "refreshThePage": "Refresh the page",
+  "throwError": "throw error"
 }
