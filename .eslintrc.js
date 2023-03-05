@@ -63,7 +63,7 @@ module.exports = {
         'simple-import-sort/imports': ['error', {
             groups: [
                 ['^react', '^', '^\\u0000'], // node_modules
-                ['^shared/', 'shared', '^pages/', 'pages', '^widgets/', 'widgets'], // apps and libs
+                ['^shared/', 'shared', '^pages/', 'pages', '^widgets/', 'widgets', 'app/providers'], // apps and libs
                 ['^\\.\\.'], // reltive paths(other folders)
                 ['^\\.'], // relative paths (current folders)
                 ['^.+\\.?(scss)$', '^.+\\.?(styles)$', '^.+\\.?(css)$'], // styles in scss and ts
