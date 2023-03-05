@@ -54,6 +54,7 @@ module.exports = {
             {
                 code: 120,
                 ignoreStrings: true,
+                ignoreComments: true,
             },
         ],
         '@typescript-eslint/member-delimiter-style': [
