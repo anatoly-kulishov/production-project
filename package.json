@@ -7,8 +7,10 @@
     "start": "npx webpack serve --env port=3000",
     "build:prod": "npx webpack --env mode=production",
     "build:dev": "npx webpack --env mode=development",
-    "lint": "eslint **/*.{ts,tsx}",
-    "lint-fix": "eslint **/*.{ts,tsx} --fix",
+    "lint:ts": "eslint \"**/*.{ts,tsx}\"",
+    "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "lint:scss": "npx stylelint \"**/*.scss\"",
+    "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "circular-deps-check": "npx madge --circular src --extensions ts,tsx --ts-config ./tsconfig.json"
   },
   "repository": {
@@ -67,6 +69,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.0",

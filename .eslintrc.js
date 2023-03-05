@@ -6,6 +6,7 @@ module.exports = {
     extends: [
         'plugin:react/recommended',
         'airbnb',
+        'plugin:i18next/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -18,6 +19,8 @@ module.exports = {
     plugins: [
         'react',
         '@typescript-eslint',
+        'i18next',
+        'simple-import-sort',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -44,6 +47,7 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         'no-console': 'warn',
+        'i18next/no-literal-string': ['error', { markupOnly: true }],
         'max-len': [
             'error',
             {
@@ -51,6 +55,21 @@ module.exports = {
                 ignoreStrings: true,
             },
         ],
+        '@typescript-eslint/member-delimiter-style': [
+            'error',
+        ],
+        'simple-import-sort/imports': ['error', {
+            groups: [
+                ['^react', '^', '^\\u0000'], // node_modules
+                ['^shared/'], // apps and libs
+                ['^\\.\\.'], // reltive paths(other folders)
+                ['^\\.'], // relative paths (current folders)
+                ['^.+\\.?(scss)$', '^.+\\.?(styles)$', '^.+\\.?(css)$'], // styles in scss and ts
+            ],
+        }],
+        'simple-import-sort/exports': 'error',
+        'no-duplicate-imports': 'error',
+        'jsx-quotes': ['error', 'prefer-double'],
     },
     globals: {
         __IS_DEV__: true,

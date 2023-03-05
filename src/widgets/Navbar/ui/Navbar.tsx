@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { RoutePath } from 'shared/config';
-import { AppLink, AppLinkTheme } from 'shared/ui';
 import { classNames } from 'shared/lib';
+import { AppLink, AppLinkTheme } from 'shared/ui';
 
 import { INavbarProps } from './Navbar.declarations';
 

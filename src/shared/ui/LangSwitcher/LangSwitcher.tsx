@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import { classNames } from '../../lib';
 import { Button, ThemeButton } from '../Button';
+
 import { LangSwitcherProps } from './LangSwitcher.declarations';
 
 import cls from './LangSwitcher.module.scss';
