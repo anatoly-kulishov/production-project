@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import { Theme, useTheme } from 'app/providers';
 
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 import { classNames } from 'shared/lib/classNames';
+import { Theme, useTheme } from 'app/providers';
 
 import { Button, ThemeButton } from '../../Button';
 
