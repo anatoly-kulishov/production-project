@@ -1,1 +1,5 @@
-export * from './ui';
+import { Sidebar } from './ui/Sidebar/Sidebar';
+
+export {
+    Sidebar,
+};

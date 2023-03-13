@@ -5,9 +5,9 @@
     // Однако это не означает, что теперь вовсе нельзя использовать any.
     // Это означает лишь, что в подобных ситуация разработчик должен явно писать any,
     "noImplicitAny": true,
-    "module": "esnext",
+    "module": "ESNext",
     // В какую спецификацию компилируем: для поддержки большинства браузеров
-    "target": "es6",
+    "target": "es5",
     "jsx": "react-jsx",
     // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
     "allowJs": true,
@@ -15,9 +15,7 @@
     // Для абсолютного импорта
     "baseUrl": ".",
     "paths": {
-      "*": [
-        "./src/*"
-      ]
+      "*": ["./src/*"]
     },
     // esModuleInterop позволяет работать с пакетами, которые используют
     // common js как с обычными пакета с помощью import (require() module.export) = common js
@@ -28,7 +26,7 @@
     // console.log(Moment);
     "esModuleInterop": true,
     // Если какая-либо библиотека не имеет default import,
-    // loaders вроде ts-loader или babel-loader автоматически создают их
+    // лоадеры вроде ts-loader или babel-loader автоматически создают их
     // вместо такого импорта
     // import * as React from 'react';
     // можно писать такой
@@ -39,5 +37,10 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./config/jest/setupTests.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+  ]
 }

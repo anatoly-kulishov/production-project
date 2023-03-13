@@ -1,20 +1,18 @@
-import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-
-import { ErrorBoundary } from 'app/providers/ErrorBoundary';
 import { ThemeProvider } from 'app/providers/ThemeProvider';
-
 import App from './app/App';
 
-const app = (
+import './shared/config/i18n/i18n';
+import { ErrorBoundary } from './app/providers/ErrorBoundary';
+
+render(
     <BrowserRouter>
         <ErrorBoundary>
             <ThemeProvider>
                 <App />
             </ThemeProvider>
         </ErrorBoundary>
-    </BrowserRouter>
+    </BrowserRouter>,
+    document.getElementById('root'),
 );
-
-render(app, document.getElementById('root'));
